@@ -1,0 +1,173 @@
+.roll{
+  position:absolute;
+  top:5%;
+  left:20%;
+  display:inline-flex;
+  
+  
+}
+.cap{
+  display:inline-flex;
+  position:absolute;
+  height:100%;
+  transform:scaleX(.5);
+  float:left;
+  margin:0;
+  z-index:4;
+
+}
+.capFront{
+  position:relative;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  background-color: rgb(87, 108, 116);
+  z-index:3;
+
+}
+.capDepth{
+  background-color:  rgb(68, 94, 102);
+  position:relative;
+  height:300px;
+  width:170px;
+  background-color: rgb(68, 94, 102);
+  left:-150px;
+  z-index:2;
+
+}
+.capBack{
+  position:relative;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  background-color:rgb(68, 94, 102);
+  left:-290px;
+  z-index:1;
+
+}
+
+.section{
+  display:inline-flex;
+  position:absolute;
+  height:100%;
+  transform:scaleX(.5);
+  float:left;
+  margin:0;
+}
+.secOne{
+  z-index:3;
+  left:100px;
+
+}
+.secTwo{
+  z-index:2;
+  left:180px;
+
+}
+.secThree{
+  z-index:1;
+  left:260px;
+
+}
+.secFour{
+  z-index:0;
+  left:340px;
+
+}
+
+.front{
+  position:relative;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  background-color: lightblue;
+  z-index:3;
+  /* float:left; */
+
+}
+
+.center{
+  position:relative;
+  height:300px;
+  width:150px;
+  background-color: rgb(68, 94, 102);
+  left:-150px;
+  z-index:2;
+  /* float:right; */
+}
+.back{
+  position:relative;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  background-color:rgb(68, 94, 102);
+  left:-300px;
+  z-index:1;
+  /* float:right; */
+
+}
+.ring{
+  position:relative;
+  height:90%;
+  width:90%;
+  border-radius:50%;
+  top:5%;
+  left:5%;
+
+}
+
+.container:{
+  width:100%;
+}
+
+.section:hover{
+  transform: translateY(30px)scaleX(.5);
+}
+
+.chosenSection{
+  animation:chosenSection .3s both;
+
+}
+
+@keyframes chosenSection{
+  0%{transform:translateY(30px)scaleX(.5);}
+  100%{transform:translateY(250px)scaleX(.5);}
+}
+
+.pole{
+  height:10px;
+  width:1000px;
+  border-radius:5px;
+  background-color:lightblue;
+  position:relative;
+  top:50%;
+  left:-950px;
+  animation:shootPole .2s both;
+  text-align: center;
+
+}
+
+@keyframes shootPole{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(0%)}
+}  
+
+.flag{
+  width:90%;
+  margin:auto;
+  height:300px;
+  animation:flagFall 1s both;
+  transform-origin: top;
+  background-color: lightcyan;
+}
+
+@keyframes flagFall{
+  0%{transform:scaleY(.1)}
+  100%{transform:scaleY(1)}
+
+}
+
+body{
+  background-color:black;
+  overflow: hidden;
+}
