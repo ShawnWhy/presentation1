@@ -213,6 +213,7 @@ setInterval(() => {
 
 
 $('.rollButton').on('click',event=>{
+    $('.button').html('')
     $('.secOne').addClass('rollolol');
     setTimeout(() => {
         $('.secTwo').addClass('rollolol');
