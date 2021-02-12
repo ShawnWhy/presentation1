@@ -199,7 +199,7 @@ body{
   height:200px;
   width:200px;
   border-radius:50%;
-  background-color: rgb(87, 108, 116);
+  background-color:  lightblue;
   z-index:3;
 
 }
@@ -221,7 +221,63 @@ ul{
 li{
   border-radius:3px;
 }
+.invisibleP{
+  display:none;
+}
 
 /* li:hover{
   background-color: lightsalmon;
 } */
+
+.veil{
+  background-color:rgba(28, 46, 45, 0.76);
+  height:100%;
+  width:100%;
+}
+
+.ripple{
+  width:.5%;
+  height:20%;
+  animation:ripple 2s both;
+  float:left;
+}
+
+@keyframes ripple{
+  0%{transform:translateY(-100%)}
+  100%{transform:translateY(550%)}
+}
+
+.underwater{
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:-2;
+}
+
+.rollButton{
+  position:fixed;
+  height:30px;
+  width:30px;
+  background-color:lightskyblue;
+  border-radius:50%;
+  bottom:5%;
+  left:5%;
+}
+
+.rollButton:hover{
+  background-color: orange;
+
+}
+
+.rollolol{
+  animation:rollolol 2s both;
+}
+
+@keyframes rollolol{
+  0%{transform:translateY(10px)scaleX(.5)}
+  50%{transform:translateY(1000px)scaleX(.5);visibility:invisible}
+  51%{transform:translateY(-400px)scaleX(.5);visibility:visible}
+  74%{transform:translateY(-400px)scaleX(.5)}
+  75%{transform:translateY(-400px)scaleX(.5)}
+  100%{transform:translateY(0)scaleX(.5)}
+}

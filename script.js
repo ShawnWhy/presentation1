@@ -189,6 +189,48 @@ $('.button').on('mouseleave','.listItem',event=>{
 })
 
 
+setInterval(() => {
+
+    $('.underwater').html('');
+    for(let i=0;i<200;i++){
+        setTimeout(() => {
+            var red=Math.floor(Math.random()*250)
+            var green=Math.floor(Math.random()*250)
+            var blue=Math.floor(Math.random()*250)
+        
+            var ripple = $('<div>');
+            ripple.addClass('ripple');
+            ripple.css('background-color','rgba('+red+','+green+','+blue+', 0.3)')
+            $('.underwater').append(ripple);
+            
+        }, i*30);
+       
+
+    }
+    
+}, 7000);
+
+
+
+$('.rollButton').on('click',event=>{
+    $('.secOne').addClass('rollolol');
+    setTimeout(() => {
+        $('.secTwo').addClass('rollolol');
+        setTimeout(() => {
+            $('.secThree').addClass('rollolol');
+            setTimeout(() => {
+                $('.secFour').addClass('rollolol');
+                setTimeout(() => {
+                    $('.section').removeClass('rollolol');
+                    
+                }, 2000);
+                
+            }, 100);
+            
+        }, 100);
+        
+    }, 100);
+})
 
 
 
